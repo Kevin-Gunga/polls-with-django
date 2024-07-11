@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>poll app</title>
+  </head>
+  <body>
+    <form method="post">
+        {% csrf_token %}
+        <label for="question_text">Question:</label>
+        <input type="text" name="question_text" id="question_text" required><br>
+        
+        <label for="pub_date">Publication Date:</label>
+        <input type="date" name="pub_date" id="pub_date" required><br>
+        
+        <label for="choice_text">Choice:</label>
+        <input type="text" name="choice_text" id="choice_text" required><br>
+        
+        <label for="votes">Votes:</label>
+        <input type="number" name="votes" id="votes" value="0" required><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+    
+  </body>
+</html>
